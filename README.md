@@ -11,7 +11,7 @@
 ##  ETL — Instrucciones de ejecución
 
 ### Google Colab
-1. Abrir el enlace: [PruebaTecnica.ipynb](https://colab.research.google.com/github/morenojosedev/Prueba-Tecnica-Qaroni/blob/main/PruebaTecnica.ipynb)
+1. Abrir el enlace: https://colab.research.google.com/github/morenojosedev/Prueba-Tecnica-Qaroni/blob/main/etl/PruebaTecnica.ipynb
 2. Ir a **Entorno de ejecución** → **Ejecutar todo**
 3. Las tablas de salida se generan automáticamente en `data/output/`
 
