@@ -104,17 +104,29 @@ Modelo en estrella con:
 
 ---
 
-##  Seguridad — Row Level Security (RLS)
+## 🔐 Seguridad — Row Level Security (RLS)
 
 | Rol | Acceso |
 |---|---|
 | Sustainability Officer Global | Acceso total al dashboard |
-| Auditor Regulacion | Solo ve empresas de su regulación asignada |
+| AudRegStatic1 | Solo ve empresas de REG000000 |
+| AudRegStatic2 | Solo ve empresas de REG000001 |
+| AudRegStatic3 | Solo ve empresas de REG000002 |
+| AudRegStatic4 | Solo ve empresas de REG000003 |
+| AudRegStatic5 | Solo ve empresas de REG000005 |
+| AudRegStatic6 | Solo ve empresas de REG000008 |
+| AudRegStatic7 | Solo ve empresas de REG000010 |
+| AudRegStatic8 | Solo ve empresas de REG000011 |
+| AudRegStatic9 | Solo ve empresas de REG000016 |
+| AudRegStatic10 | Solo ve empresas de REG000019 |
 
-El RLS está implementado en Power BI Desktop mediante
-filtros DAX. En producción se asignarían usuarios reales
-a cada rol usando `USERPRINCIPALNAME()` cruzado con
-la tabla `MapeoUsuarios`.
+Los roles de auditor están implementados con filtros DAX estáticos
+sobre `FACT_Riesgo_Regulatorio[regulacion_id]`. Cada auditor
+solo puede ver las empresas asociadas a su regulación asignada.
+
+En producción con Power BI Service, los filtros estáticos se
+reemplazarían por `USERPRINCIPALNAME()` cruzado con la tabla
+`MapeoUsuarios`, asignando usuarios reales a cada rol.
 
 **Para probar los roles en Power BI Desktop:**
 1. Pestaña **Modelado** → **Ver como**
