@@ -71,16 +71,21 @@ Después de ejecutar el ETL en Google Colab:
 ---
 
 ##  Tablas de Salida
-
 ### Tabla 1 — Impacto Ambiental Empresas
 | Campo | Descripción |
 |---|---|
 | empresa_id | Identificador único de la empresa |
 | nombre | Nombre oficial de la empresa |
+| pais | País de la empresa |
 | emisiones_netas | Emisiones después de aplicar reducciones |
 | cumple_normativa | 1 = Cumple, 0 = No cumple |
-| regulacion_id | Normativa aplicable a la empresa |
-| costo_impuesto | Multa estimada por exceso de emisiones |
+| regulacion_id | Regulación evaluada |
+| costo_impuesto | Multa estimada si no cumple esa regulación |
+
+> ⚠️ Archivo comprimido: `tabla_salida_1.rar` (1.52MB / 135MB descomprimida)
+> Contiene **2.462.700 filas** — cruce NxMxO: 
+> 24.627 empresas × 10 regulaciones × 10 países.
+> Descomprimir antes de usar en Power BI.
 
 ### Tabla 2 — Beneficios Proyectos Energéticos
 | Campo | Descripción |
